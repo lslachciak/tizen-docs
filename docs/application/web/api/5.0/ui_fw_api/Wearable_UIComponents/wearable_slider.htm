@@ -44,11 +44,16 @@
 
 <p>To manually create a slider component, use the component constructor from the <code>tau</code> namespace</p>
 
+<p>HTML code:</p>
+
 <pre class="prettyprint">&lt;input id=&quot;slider&quot;/&gt;
-&lt;script&gt;
-   var sliderElement = document.getElementById(&quot;slider&quot;),
-       slider = tau.widget.Slider(sliderElement);
-&lt;/script&gt;
+</pre>
+
+<p>JS code:</p>
+
+<pre class="prettyprint">
+var sliderElement = document.getElementById(&quot;slider&quot;),
+    slider = tau.widget.Slider(sliderElement);
 </pre>
 
 <p>The constructor requires an <code>HTMLElement</code> parameter to create the component, and you can get it with the <code>document.getElementById()</code> method. The constructor can also take a second parameter, which is an object defining the configuration options for the component.</p>
@@ -87,7 +92,7 @@
 
 			<tr>
 				<td class="option"><span style="font-family: Courier New,Courier,monospace">containerClassName</span></td>
-				<td class="option">?string</td>
+				<td class="option">string</td>
 				<td class="option">null</td>
 				<td class="option">Sets the class name of CircleProgressBar container.</td>
 			</tr>
@@ -143,17 +148,22 @@
 
 <p>To call a method on the component, use one of the existing APIs:</p>
 
-<pre class="prettyprint">&lt;input id=&quot;slider&quot; type=&quot;range&quot; name=&quot;slider-1&quot; value=&quot;60&quot; min=&quot;0&quot; max=&quot;100&quot;/&gt;
-&lt;script&gt;
-   var slider = document.getElementById(&quot;slider&quot;),
-       slider = tau.widget.Slider(slider);
+<p>HTML code:</p>
 
-   /*
-      slider.methodName(methodArgument1, methodArgument2, ...);
-      For example:
-   */
-   var value = slider.value();
-&lt;/script&gt;
+<pre class="prettyprint">&lt;input id=&quot;slider&quot; type=&quot;range&quot; name=&quot;slider-1&quot; value=&quot;60&quot; min=&quot;0&quot; max=&quot;100&quot;/&gt;
+</pre>
+
+<p>JS code:</p>
+
+<pre class="prettyprint">
+var slider = document.getElementById(&quot;slider&quot;),
+    slider = tau.widget.Slider(slider);
+
+/*
+   slider.methodName(methodArgument1, methodArgument2, ...);
+   For example:
+*/
+var value = slider.value();
 </pre>
 
 	<h3>Summary</h3>
@@ -244,14 +254,17 @@
 						<div class="example">
 							<span class="example"><p>Code
 								example:</p><p></p></span>
+							<p>HTML code:</p>
 							<pre name="code" class="examplecode
 							prettyprint">
 &lt;input id=&quot;Slider&quot; name=&quot;slider-1&quot; type=&quot;range&quot; value=&quot;5&quot; min=&quot;0&quot; max=&quot;10&quot;/&gt;
-&lt;script&gt;
-   var slider = document.getElementById(&quot;Slider&quot;),
-       sliderWidget = tau.widget.Slider(slider);
-   sliderWidget.disable();
-&lt;/script&gt;
+</pre>
+							<p>JS code:</p>
+							<pre name="code" class="examplecode
+							prettyprint">
+var slider = document.getElementById(&quot;Slider&quot;),
+    sliderWidget = tau.widget.Slider(slider);
+sliderWidget.disable();
 </pre>
 						</div>
 
@@ -298,14 +311,18 @@
 						<div class="example">
 							<span class="example"><p>Code
 								example :</p><p></p></span>
+							<p>HTML code:</p>
 							<pre name="code" class="examplecode
 							prettyprint">
 &lt;input id=&quot;Slider&quot; name=&quot;slider-1&quot; type=&quot;range&quot; value=&quot;5&quot; min=&quot;0&quot; max=&quot;10&quot;/&gt;
-&lt;script&gt;
-   var slider = document.getElementById(&quot;Slider&quot;),
-       sliderWidget = tau.widget.Slider(slider);
-   sliderWidget.enable();
-&lt;/script&gt;
+</pre>
+
+							<p>JS code:</p>
+							<pre name="code" class="examplecode
+							prettyprint">
+var slider = document.getElementById(&quot;Slider&quot;),
+    sliderWidget = tau.widget.Slider(slider);
+sliderWidget.enable();
 </pre>
 						</div>
 
@@ -357,14 +374,17 @@
 						<div class="example">
 							<span class="example"><p>Code
 								example :</p><p></p></span>
+							<p>HTML code:</p>
 							<pre name="code" class="examplecode
 							prettyprint">
 &lt;input id=&quot;Slider&quot; name=&quot;slider-1&quot; type=&quot;range&quot; value=&quot;5&quot; min=&quot;0&quot; max=&quot;10&quot;/&gt;
-&lt;script&gt;
-   var slider = document.getElementById(&quot;Slider&quot;),
-       sliderWidget = tau.widget.Slider(slider);
-   sliderWidget.refresh();
-&lt;/script&gt;
+</pre>
+							<p>JS code:</p>
+							<pre name="code" class="examplecode
+							prettyprint">
+var slider = document.getElementById(&quot;Slider&quot;),
+    sliderWidget = tau.widget.Slider(slider);
+sliderWidget.refresh();
 </pre>
 						</div>
 
@@ -419,17 +439,21 @@
 						<div class="example">
 							<span class="example"><p>Code
 								example :</p><p></p></span>
+							<p>HTML code:</p>
 							<pre name="code" class="examplecode
 							prettyprint">
 &lt;input id=&quot;Slider&quot; name=&quot;slider-1&quot; type=&quot;range&quot; value=&quot;5&quot; min=&quot;0&quot; max=&quot;10&quot;/&gt;
-&lt;script&gt;
-   var slider = document.getElementById(&quot;Slider&quot;),
-       sliderWidget = tau.widget.Slider(slider);
-   /* Get the slider value */
-   value = sliderWidget.value();
-   /* Set the value for the slider */
-   sliderWidget.value(&quot;1&quot;);
-&lt;/script&gt;
+</pre>
+
+							<p>JS code:</p>
+							<pre name="code" class="examplecode
+							prettyprint">
+var slider = document.getElementById(&quot;Slider&quot;),
+    sliderWidget = tau.widget.Slider(slider);
+/* Get the slider value */
+value = sliderWidget.value();
+/* Set the value for the slider */
+sliderWidget.value(&quot;1&quot;);
 </pre>
 						</div>
 
